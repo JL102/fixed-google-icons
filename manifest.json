@@ -2,11 +2,7 @@
     "manifest_version": 2,
 	"version": "0.0.1",
     "name": "Fixed Google Icons", 
-    "description": "My first Chrome extension.",
-    "browser_action": {
-        "default_icon": "icon.png",
-        "default_popup": "popup.html"
-	},
+    "description": "Changes the new Google icons back to how they should be.",
 	"background": {
 		"scripts": ["background.js"],
 		"persistent": false
@@ -15,5 +11,8 @@
 		"webNavigation",
 		"tabs",
         "https://*/"
-     ]
+    ],
+    "web_accessible_resources": [
+        "images/*"
+    ]
 }
