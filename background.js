@@ -1,5 +1,6 @@
 var faviconUrls = {
 	gmail: 'https://old-google-icons.s3.amazonaws.com/gmail/gmail.ico',
+	maps: 'https://old-google-icons.s3.amazonaws.com/maps/maps-2.ico',
 }
 
 chrome.webNavigation.onDOMContentLoaded.addListener(function () {
@@ -18,6 +19,9 @@ chrome.webNavigation.onDOMContentLoaded.addListener(function () {
 			var faviconUrl;
 			if (url.includes('mail.google.com')) {
 				faviconUrl = faviconUrls.gmail;
+			}
+			else if (url.includes('maps.google.com') || url.includes('google.com/maps')) {
+				faviconUrl = faviconUrls.maps;
 			}
 			
 			if (faviconUrl) {
