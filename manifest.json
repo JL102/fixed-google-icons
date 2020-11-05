@@ -5,10 +5,12 @@
     "description": "Changes the new Google icons back to how they should be.",
 	"background": {
 		"scripts": ["background.js"],
-		"persistent": false
+		"persistent": true
 	},
     "permissions": [
-		"webNavigation",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking",
 		"tabs",
         "https://*/"
     ],
